@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Murder Mystery 2 - Roblox Web Edition</title>
+    <title>Murder Mystery 2 - Web Edition</title>
     <link rel="stylesheet" href="style.css">
-    <!-- BIBLIOTECA THREE.JS PARA 3D -->
+    <!-- THREE.JS & ORBIT CONTROLS PARA CÂMERA 3D -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
 
             <div id="timer-box">
                 <span id="game-state">LOBBY</span>
-                <span id="game-timer">02:00</span>
+                <span id="game-timer">00:15</span>
             </div>
 
             <div class="stat-box coins-box">
@@ -48,7 +49,7 @@
             <button onclick="openTab('gamepass')">⭐ GAMEPASSES</button>
         </nav>
 
-        <!-- MODAIS -->
+        <!-- MODAIS (INVENTÁRIO, LOJA, GAMEPASSES) -->
         <div id="modal-screen" class="overlay hidden">
             <div class="modal-content">
                 <button class="close-btn" onclick="closeModal()">X</button>
@@ -71,7 +72,7 @@
         </div>
     </div>
 
-    <!-- CONTAINER DO MUNDO 3D -->
+    <!-- CONTAINER 3D -->
     <div id="canvas-container"></div>
 
     <script src="script.js"></script>
