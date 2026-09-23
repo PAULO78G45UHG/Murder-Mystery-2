@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Murder Mystery 2 - Roblox Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- BIBLIOTECA THREE.JS PARA 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- INTRO DE DISPOSITIVO -->
+    <div id="device-screen" class="overlay">
+        <div class="device-box">
+            <h2>ESCOLHA SEU DISPOSITIVO</h2>
+            <div class="device-buttons">
+                <button class="btn-device" onclick="selectDevice('desktop')">💻 PC / Laptop</button>
+                <button class="btn-device" onclick="selectDevice('mobile')">📱 Mobile / Tablet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HUD SUPERIOR -->
+    <div id="game-ui">
+        <header id="hud-top">
+            <div class="stat-box level-box">
+                <span class="label">LEVEL</span>
+                <span id="player-level">1</span>
+                <div class="xp-bar"><div id="xp-fill"></div></div>
+            </div>
+
+            <div id="timer-box">
+                <span id="game-state">LOBBY</span>
+                <span id="game-timer">02:00</span>
+            </div>
+
+            <div class="stat-box coins-box">
+                <span class="label">MOEDAS</span>
+                <span id="player-coins">250</span>
+            </div>
+        </header>
+
+        <!-- MENU LATERAL -->
+        <nav id="sidebar">
+            <button onclick="openTab('inventory')">🎒 INVENTÁRIO</button>
+            <button onclick="openTab('shop')">🛒 LOJA</button>
+            <button onclick="openTab('gamepass')">⭐ GAMEPASSES</button>
+        </nav>
+
+        <!-- MODAIS -->
+        <div id="modal-screen" class="overlay hidden">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">X</button>
+                
+                <div id="tab-inventory" class="tab-content hidden">
+                    <h2>SEU INVENTÁRIO</h2>
+                    <div id="inventory-grid" class="item-grid"></div>
+                </div>
+
+                <div id="tab-shop" class="tab-content hidden">
+                    <h2>LOJA DE ITENS</h2>
+                    <div id="shop-grid" class="item-grid"></div>
+                </div>
+
+                <div id="tab-gamepass" class="tab-content hidden">
+                    <h2>GAMEPASSES</h2>
+                    <div id="gamepass-grid" class="item-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER DO MUNDO 3D -->
+    <div id="canvas-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

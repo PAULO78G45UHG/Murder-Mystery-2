@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* OVERLAYS */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.device-box {
+    text-align: center;
+    background: #181818;
+    padding: 40px;
+    border: 3px solid #e53935;
+    border-radius: 16px;
+}
+
+.btn-device {
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    background: #222;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-device:hover {
+    background: #e53935;
+}
+
+/* HUD */
+#hud-top {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.stat-box {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #444;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+.level-box { border-color: #2196f3; }
+.coins-box { border-color: #ffeb3b; }
+
+.xp-bar {
+    width: 100px;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+#xp-fill {
+    width: 40%;
+    height: 100%;
+    background: #2196f3;
+}
+
+#timer-box {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #e53935;
+    padding: 8px 24px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+#game-timer {
+    display: block;
+    font-size: 20px;
+    color: #ffeb3b;
+}
+
+/* SIDEBAR */
+#sidebar {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+}
+
+#sidebar button {
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MODAIS DE LOJA E INVENTÁRIO */
+.modal-content {
+    background: #151515;
+    width: 80%;
+    max-width: 700px;
+    height: 70%;
+    border: 3px solid #e53935;
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.item-card {
+    background: #222;
+    border: 2px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* CONTAINER 3D */
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
